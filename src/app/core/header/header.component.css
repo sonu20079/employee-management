@@ -9,20 +9,20 @@
     justify-content: space-between;
   }
 
-  .main-header div a {
+  .main-header div button {
    margin-right: 80px;
   }
   
 
-  .add-button a {
+  .add-button button {
   color: white;
   background: #ff1b68;
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
 
-.add-button a:hover,
-.add-button a:active, {
+.add-button button:hover,
+.add-button button:active, {
   color: #ff1b68;
   background: white;
   border: none;

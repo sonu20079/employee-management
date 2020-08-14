@@ -9,6 +9,8 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { SharedModule } from './shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,10 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

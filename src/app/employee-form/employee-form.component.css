@@ -1,0 +1,94 @@
+.employee-modal {
+    position: fixed;
+    /* display: none; */
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .employee-modal-title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  
+  .employee-modal-actions {
+    text-align: center;
+  }
+  
+  .employee-modal-action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .employee-modal-action:hover,
+  .employee-modal-action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+  }
+  
+  .employee-modal-action-cancel {
+    background: red;
+    border-color: red;
+  }
+  
+  .employee-modal-action-cancel:hover,
+  .employee-modal-action-cancel:active {
+    background: #ff5454;
+    border-color: #ff5454;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .employee-form {
+    padding: 1rem;
+}
+
+.employee-form label {
+    font-weight: bold;
+}
+
+.employee-form label,
+.employee-form input,
+.employee-form select {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+
+/* .employee-form input:focus,
+.employee-form select:focus {
+    outline: none;
+    background: #d8f3df;
+    border-color: #2ddf5c;
+} */
+
+
+.employee-form input.ng-invalid.ng-touched,
+.employee-form select.ng-invalid.ng-touched {
+    border-color: red !important;
+    /* background: #faacac; */
+}
+
+.employee-form button[type="submit"] {
+    display: block;
+    margin-top: 1rem;
+}
