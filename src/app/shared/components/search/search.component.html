@@ -1,0 +1,10 @@
+<div class="search-employees">
+        <input type="search"
+               class="search-employees-input"
+               placeholder="Search"
+               name="search"
+               [(ngModel)] = "searchText"
+               autocomplete="off"
+               (input)="searchEmployees()">
+        <button class="search-employees-button"><i class="fa fa-search search-icon" aria-hidden="true"></i></button>
+      </div>

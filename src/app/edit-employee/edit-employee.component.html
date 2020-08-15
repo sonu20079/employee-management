@@ -1,1 +1,7 @@
-<app-employee-form></app-employee-form>
+<div class="backdrop" (click) = "closeModal()"></div>
+<app-employee-form #employeeForm>
+    <div class="employee-modal-actions">
+        <button class="employee-modal-action employee-modal-action-submit" (click)="submit()" [disabled]="!employeeFormComponent?.employeeForm?.valid && employeeFormComponent?.employeeForm?.touched">Edit</button>
+        <button class="employee-modal-action employee-modal-action-cancel" (click)="closeModal()" type="button">Cancel</button>
+    </div>
+</app-employee-form>

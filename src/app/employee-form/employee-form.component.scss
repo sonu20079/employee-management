@@ -1,0 +1,121 @@
+.employee-modal {
+    position: fixed;
+    /* display: none; */
+    z-index: 200;
+    top: 5%;
+    left: 30%;
+    width: 40%;
+    // background: white;
+    // padding: 1rem;
+    // border: 1px solid #ccc;
+    // box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    background: #fff;
+    box-shadow: 0 10px 80px rgba(0,0,0,.05);
+    border-radius: 20px;
+    padding: 35px;
+
+  }
+
+  .employee-modal-title {
+    padding: 0 0 12px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+    color: #212121;
+  }
+  
+
+ 
+
+  .employee-form {
+    padding: 1rem;
+}
+
+.employee-form label {
+  width: 100%;
+  // position: relative;
+  // display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-block {
+  margin-top: 1rem;
+}
+
+// .employee-form label,
+.employee-form input,
+.employee-form select {
+    display: block;
+    margin-top: 1rem;
+    height: 43px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding: 0 12px;
+    border-radius: 4px;
+    border: 1px solid #e9e9f0;
+    background-color: #fff;
+}
+
+
+/* .employee-form input:focus,
+.employee-form select:focus {
+    outline: none;
+    background: #d8f3df;
+    border-color: #2ddf5c;
+} */
+
+
+.employee-form input.ng-invalid.ng-touched,
+.employee-form select.ng-invalid.ng-touched {
+    border-color: red !important;
+    /* background: #faacac; */
+}
+
+// .employee-form button[type="submit"] {
+//     display: block;
+//     margin-top: 1rem;
+// }
+
+// .dropbtn {
+//     background-color: #3498DB;
+//     color: white;
+//     padding: 16px;
+//     font-size: 16px;
+//     border: none;
+//     cursor: pointer;
+//   }
+  
+//   .dropbtn:hover, .dropbtn:focus {
+//     background-color: #2980B9;
+//   }
+  
+//   .dropdown {
+//     position: relative;
+//     display: inline-block;
+//   }
+  
+//   .dropdown-content {
+//     position: absolute;
+//     background-color: #f1f1f1;
+//     min-width: 160px;
+//     overflow: auto;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//     z-index: 1;
+//   }
+  
+//   .dropdown-content a {
+//     color: black;
+//     padding: 12px 16px;
+//     text-decoration: none;
+//     display: block;
+//   }
+  
+//   .dropdown a:hover {background-color: #ddd;}
+
+  

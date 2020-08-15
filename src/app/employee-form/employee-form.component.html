@@ -1,40 +1,47 @@
-<div class="backdrop"></div>
 <div class="employee-modal">
-    <h1 class="employee-modal-title">Add Employee</h1>
+    <h1 class="employee-modal-title">{{(sharedService.editEmployeeClicked?.employeeId ? 'Edit ': 'Add ')}} Employee</h1>
     <div class="employee-form">
-        <form [formGroup]="employeeForm" (ngSubmit)="submit()">
-            <div>
-                <label for="name">Name</label>
+        <form [formGroup]="employeeForm">
+            <div class = "input-block">
+                    <!-- <div class="dropdown">
+                            <button (click) ="showHideDropdown()" class="dropbtn">Dropdown</button>
+                            <div id="myDropdown" class="dropdown-content" *ngIf = "showDropdown">
+                              <a href="#home">Home</a>
+                              <a href="#about">About</a>
+                              <a href="#contact">Contact</a>
+                            </div>
+                          </div> -->
+                <label for="name">Name *</label>
                 <input formControlName="name" type="text" id="name">
                 <div *ngIf="!getFormControl('name').valid && getFormControl('name').touched" class="invalid-feedback">
                     <div *ngIf="getFormControl('name').errors.required">First Name is required</div>
                 </div>
             </div>
-            <div>
-                <label for="company_name">Company Name</label>
+            <div class = "input-block">
+                <label for="company_name">Company Name *</label>
                 <input formControlName="company_name" type="text" id="company-name">
                 <div *ngIf="!getFormControl('company_name').valid && getFormControl('company_name').touched" class="invalid-feedback">
                         <div *ngIf="getFormControl('company_name').errors.required">Company Name is required</div>
                     </div>
             </div>
-            <div>
-                <label for="email">E-Mail</label>
+            <div class="input-block">
+                <label for="email">E-Mail *</label>
                 <input formControlName="email" type="email" id="email">
                 <div *ngIf="!getFormControl('email').valid && getFormControl('email').touched" class="invalid-feedback">
                         <div *ngIf="getFormControl('email').errors.required">Email is required</div>
                         <div *ngIf="getFormControl('email').errors.email">Email should be in correct format</div>
                 </div>
             </div>
-            <div>
-                <label for="contact_no">Contact Number</label>
+            <div class="input-block">
+                <label for="contact_no">Contact Number *</label>
                 <input formControlName="contact_no" type="text" id="contact_no">
                 <div *ngIf="!getFormControl('contact_no').valid && getFormControl('contact_no').touched" class="invalid-feedback">
                         <div *ngIf="getFormControl('contact_no').errors.required">Contact Number is required</div>
                         <div *ngIf="getFormControl('contact_no').errors.minLength">Contact Number length 10</div>
                     </div>
             </div>
-            <div>
-                <label for="designation">Designation</label>
+            <div class="input-block">
+                <label for="designation">Designation *</label>
                 <select formControlName="designation" id="designation">
                     <option *ngFor = "let dsgn of designations" [value]="dsgn">{{dsgn}}</option>
                 </select>
@@ -42,10 +49,7 @@
                         <div *ngIf="getFormControl('designation').errors.required">Designation is required</div>
                     </div>
             </div>
-            <div class="employee-modal-actions">
-                <button class="employee-modal-action employee-modal-action-submit" [disabled] = "!employeeForm.valid && employeeForm.touched"  type="submit">Submit</button>
-                <button class="employee-modal-action employee-modal-action-cancel" (click) = "sharedService.addEmployeeClicked = false" type="button">Cancel</button>
-            </div>
+            <ng-content></ng-content>
         </form>
     </div>
 

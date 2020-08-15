@@ -1,6 +1,7 @@
 <header class="main-header">
-    <div>Employees</div>
-    <div class="add-button">
-        <button (click) = "sharedService.addEmployeeClicked = true">Add</button>
+    <div>Employee Management System</div>
+    <div class="navigation-buttons">
+        <span class="header-button go-to-employees" (click) = "gotToEmployees()">Employees</span>
+        <span class="header-button create-new-member" (click) = "sharedService.addEmployeeClicked = true">+ Add Member</span>
     </div>
 </header>
