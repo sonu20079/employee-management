@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '../node_modules/font-awesome/css/font-awesome.css';
+@import 'src/app/shared/styles/app-colors.scss';
 
 * {
     box-sizing: border-box;
   }
   
   body {
+    font-family: sans-serif;
     margin: 0;
   }
 
@@ -24,7 +26,7 @@
     text-align: center;
     margin-top: 2rem;
   }
-  
+
   .employee-modal-action {
     width: auto;
     height: 42px;
@@ -35,30 +37,32 @@
     margin-right: 15px;
     text-align: center;
     border-radius: 4px;
-    border: 1px solid #6c00ea;
+    border: 1px solid $dark-blue;
   }
   
-  /* .employee-modal-action:hover,
-  .employee-modal-action:active {
-    background: #2ddf5c;
-    border-color: #2ddf5c;
-  } */
-  
   .employee-modal-action-cancel {
-    background-color: #fff;
-    color: #6c00ea;
+    background-color: $white;
+    color: $dark-blue;
   }
 
   .employee-modal-action-submit {
-    background-color: #6c00ea;
-    color: #fff;
+    background-color: $dark-blue;
+    color: $white;
   }
   
   .employee-modal-action-cancel:hover {
-    background-color: #6c00ea;
-    color: #fff;
+    background-color: $dark-blue;
+    color: $white;
+  }
+
+  .no-result {
+    margin-left: 40%;
+    margin-top: 20%;
+    color: red;
   }
   
   #toast-container > div {
     opacity:1;
 }
+
+

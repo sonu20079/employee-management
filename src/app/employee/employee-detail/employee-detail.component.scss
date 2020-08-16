@@ -1,0 +1,33 @@
+@import 'src/app/shared/styles/app-colors.scss';
+  
+  .employee-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+  }
+  
+  .employee-detail-container {
+    margin-top: 7rem;
+  }
+  
+  .employee-image {
+    width: 100%;
+    text-align: center;
+  
+    img {
+      border-radius: 50%;
+      height: 230px;
+      width: 230px;
+      border: 1px solid grey;
+    }
+  }
+  
+  .employee-info {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .employee-info div {
+     margin-bottom: 4px;
+  }

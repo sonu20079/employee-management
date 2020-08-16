@@ -1,0 +1,25 @@
+<div class="employee-detail-container">
+        <div class="employee-details" *ngIf="employee; else noResult">
+          <div class="employee-image" id="employee-image">
+            <img [src]="employee.avatar" alt="employee.name" />
+          </div>
+          <div class="employee-info" id="employee-info">
+            <div>
+                <label>Id: </label>
+                 {{ employee.id }}
+            </div>
+            <div>
+                <label>Name: </label>
+                 {{ employee.name }}
+            </div>
+            <div><label>Email: </label> {{ employee.email }}</div>
+            <div><label>Company Name: </label> {{ employee.company_name }}</div>
+            <div><label>Contact Number: </label> {{ employee.contact_no }}</div>
+            <div><label>Designation: </label> {{ employee.designation }}</div>
+          </div>
+        </div>
+        <ng-template #noResult>
+          <h2 class="no-result">Result not found</h2>
+        </ng-template>
+      
+      </div>

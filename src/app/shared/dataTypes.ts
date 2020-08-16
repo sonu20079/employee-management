@@ -6,6 +6,7 @@ export interface EmployeeData {
     email: string;
     contact_no: string;
     designation: Designation; 
+    avatar?: string; 
   }
 
   export enum Designation {
@@ -16,4 +17,6 @@ export interface EmployeeData {
       Manager =  'Manager',
   }
 
-  export const DESIGNATIONS  = [Designation.SoftwareDeveloper, Designation.SeniorSoftwareDeveloper, Designation.QualityAssurance, Designation.TeamLead, Designation.Manager]
+  export const DESIGNATIONS  = [Designation.SoftwareDeveloper, Designation.SeniorSoftwareDeveloper, Designation.QualityAssurance, Designation.TeamLead, Designation.Manager];
+
+  export const AVATARS = ['assets/images/software-developer.jpg', 'assets/images/senior-developer.png', 'assets/images/QA.png', 'assets/images/team-lead.jpg', 'assets/images/manager.jpg'];

@@ -3,7 +3,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
 
@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Emit search text for parent components.
   searchEmployees() {
     this.searchEmit.emit(this.searchText);
   }

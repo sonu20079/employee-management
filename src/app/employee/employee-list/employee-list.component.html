@@ -1,0 +1,55 @@
+<div class="employee-list">
+    <div *ngIf="deleteModal?.show" (click)="hideDeleteModal()" class="backdrop"></div>
+    <app-search *ngIf = "employees.length > 0" (searchEmit)="searchText = $event"></app-search>
+    <div class="table-users" *ngIf = "employees.length > 0; else noResult">
+        <table cellspacing="0">
+            <tr>
+                <th></th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Company Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Designation</th>
+                <th>Action</th>
+            </tr>
+
+            <tr *ngFor="let employee of employees | filter: searchText">
+                <td>
+                    <img [src]="employee.avatar">
+                </td>
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.company_name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.contact_no}}</td>
+                <td>{{employee.designation}}</td>
+                <td>
+                    <span class="action-button" (click)="editEmployee(employee.id)">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </span>
+                    <span class="action-button" (click)="showDeleteModal(employee.id)">
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </span>
+                    <span class="action-button" (click)="employeeDetail(employee.id)">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    </span>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    <ng-template #noResult>
+        <h2 class="no-result">Result not found</h2>
+    </ng-template>
+</div>
+<app-add-employee *ngIf="sharedService.addEmployeeClicked"></app-add-employee>
+<app-edit-employee *ngIf="sharedService.editEmployeeClicked?.show"></app-edit-employee>
+<div class="employee-delete-modal" *ngIf="deleteModal?.show">
+    <h1 class="employee-delete-modal-title">You want to delete?</h1>
+
+    <div class="employee-modal-actions">
+        <button class="employee-modal-action employee-modal-action-submit" (click)="deleteEmployee()">Yes</button>
+        <button class="employee-modal-action employee-modal-action-cancel" (click)="hideDeleteModal()">No</button>
+    </div>
+</div>

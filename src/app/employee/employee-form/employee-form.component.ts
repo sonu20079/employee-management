@@ -3,10 +3,10 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
 
 //Application Imports
-import { SharedService } from '../shared/services/shared.service';
-import { Designation, DESIGNATIONS, EmployeeData, AVATARS } from '../shared/dataTypes';
-import { EmployeeService } from '../shared/services/employee.service';
-import { Employee } from '../shared/models/employee';
+import { SharedService } from '../../shared/services/shared.service';
+import { Designation, DESIGNATIONS, EmployeeData, AVATARS } from '../../shared/dataTypes';
+import { EmployeeService } from '../../shared/services/employee.service';
+import { Employee } from '../../shared/models/employee';
 
 @Component({
   selector: 'app-employee-form',

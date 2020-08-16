@@ -7,6 +7,7 @@ export class Employee implements EmployeeData {
     email: string;
     contact_no: string;
     designation: Designation; 
+    avatar?: string; 
     constructor(data: EmployeeData) {
         this.id = data.id;
         this.name = data.name;
@@ -14,5 +15,6 @@ export class Employee implements EmployeeData {
         this.email = data.email;
         this.contact_no = data.contact_no;
         this.designation = data.designation;
+        this.avatar = data.avatar;
     }
 }

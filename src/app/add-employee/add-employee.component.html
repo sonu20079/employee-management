@@ -1,7 +1,0 @@
-<div class="backdrop" (click) = "sharedService.addEmployeeClicked = false"></div>
-<app-employee-form #employeeForm>
-    <div class="employee-modal-actions">
-        <button class="employee-modal-action employee-modal-action-submit" (click) = "submit()" [disabled]="!employeeFormComponent?.employeeForm?.valid && employeeFormComponent?.employeeForm?.touched">Add</button>
-        <button class="employee-modal-action employee-modal-action-cancel" (click)="sharedService.addEmployeeClicked = false" type="button">Cancel</button>
-    </div>
-</app-employee-form>

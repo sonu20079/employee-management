@@ -1,7 +1,7 @@
 <header class="main-header">
-    <div>Employee Management System</div>
+    <h2>Employee Management System</h2>
     <div class="navigation-buttons">
-        <span class="header-button go-to-employees" (click) = "gotToEmployees()">Employees</span>
-        <span class="header-button create-new-member" (click) = "sharedService.addEmployeeClicked = true">+ Add Member</span>
+        <span class="header-button go-to-employees" *ngIf = "!isHomeUrl" (click) = "gotToEmployees()">Employees</span>
+        <span class="header-button create-new-member" *ngIf = "isHomeUrl" (click) = "sharedService.addEmployeeClicked = true">+ Add Member</span>
     </div>
 </header>

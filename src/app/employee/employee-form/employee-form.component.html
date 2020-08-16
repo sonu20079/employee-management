@@ -29,7 +29,7 @@
                 <input formControlName="email" type="email" id="email">
                 <div *ngIf="!getFormControl('email').valid && getFormControl('email').touched" class="invalid-feedback">
                         <div *ngIf="getFormControl('email').errors.required">Email is required</div>
-                        <div *ngIf="getFormControl('email').errors.email">Email should be in correct format</div>
+                        <div *ngIf="getFormControl('email').errors.pattern">Email should be in correct format</div>
                 </div>
             </div>
             <div class="input-block">
@@ -37,19 +37,36 @@
                 <input formControlName="contact_no" type="text" id="contact_no">
                 <div *ngIf="!getFormControl('contact_no').valid && getFormControl('contact_no').touched" class="invalid-feedback">
                         <div *ngIf="getFormControl('contact_no').errors.required">Contact Number is required</div>
-                        <div *ngIf="getFormControl('contact_no').errors.minLength">Contact Number length 10</div>
+                        <div *ngIf="getFormControl('contact_no').errors.pattern">Contact Number should be in correct format</div>
                     </div>
             </div>
-            <div class="input-block">
-                <label for="designation">Designation *</label>
-                <select formControlName="designation" id="designation">
-                    <option *ngFor = "let dsgn of designations" [value]="dsgn">{{dsgn}}</option>
-                </select>
-                <div *ngIf="!getFormControl('designation').valid && getFormControl('designation').touched" class="invalid-feedback">
-                        <div *ngIf="getFormControl('designation').errors.required">Designation is required</div>
+            <div class="input-block flexRow">
+                    <div class="halfWidth avatarRowGroup">
+                            <label >Avatar *</label>
+                            <div class="avatarRow">
+                                <span><img [src]="selectedAvatar"><input type="text" formControlName = "avatar" [(ngModel)] = "selectedAvatar"  style="display: none"></span>
+                                <ul *ngIf = "showAvatarDropdown">
+                                    <li *ngFor = "let avatar of avatars" (click) = "selectAvatar(avatar)"><img [src]="avatar"></li>
+                                </ul>
+                            </div>
                     </div>
+
+                    <div class="spacer-h"></div>
+
+                <div class="halfWidth designationRowGroup">
+                        <label for="designation">Designation *</label>
+                        <select formControlName="designation" id="designation">
+                            <option *ngFor = "let dsgn of designations" [value]="dsgn">{{dsgn}}</option>
+                        </select>
+                        <div *ngIf="!getFormControl('designation').valid && getFormControl('designation').touched" class="invalid-feedback">
+                                <div *ngIf="getFormControl('designation').errors.required">Designation is required</div>
+                            </div>
+                </div>
             </div>
-            <ng-content></ng-content>
+            <div class="employee-modal-actions">
+                    <button class="employee-modal-action employee-modal-action-submit" [disabled]="!employeeForm.valid" (click) = "submit()">Add</button>
+                    <button class="employee-modal-action employee-modal-action-cancel" (click)="cancel()" type="button">Cancel</button>
+            </div>
         </form>
     </div>
 

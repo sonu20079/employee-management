@@ -1,0 +1,92 @@
+@import 'src/app/shared/styles/app-colors.scss';
+
+.employee-modal {
+    position: fixed;
+    z-index: 200;
+    top: 5%;
+    left: 30%;
+    width: 40%;
+    background: $white;
+    box-shadow: 0 10px 80px rgba(0,0,0,.05);
+    border-radius: 20px;
+    padding: 35px;
+
+  }
+
+  .employee-modal-title {
+    padding: 0 0 12px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+    color: #212121;
+  }
+  
+  .employee-form {
+    height: 500px;
+    overflow: auto;
+  }
+
+  .employee-form label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .input-block {
+    margin-top: 1rem;
+
+    &.flexRow {display: flex; justify-content: space-between;
+      .halfWidth {width: calc(50% - 10px);
+        .avatarRow {width: 100%; border-radius: 4px; padding: 8px; height: 43px; border:1px solid #e9e9f0; margin-top:1rem; position: relative;
+          img {max-height: 100%; width: auto; cursor: pointer;}
+          ul {margin: 0; padding: 0; position: absolute; width:100%; max-height: 150px; overflow-y: auto; top:100%; left:0; display: none; background: $white;
+            li {display: block; list-style-type: none; height: 30px; padding: 5px; text-align: center; border:1px solid #e9e9f0;}
+            // &:hover {background: grey}
+          }
+          &:hover {
+            ul {display: block;}
+          }
+        }
+      }
+    }
+  }
+
+.designationRowGroup {
+  width: auto;
+  max-width: 40%;
+}
+
+.avatarRowGroup {
+  width: auto;
+  max-width: 60%;
+}
+
+.spacer {
+  width: 10px;
+}
+
+.employee-form input,
+.employee-form select {
+    display: block;
+    margin-top: 1rem;
+    height: 43px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding: 0 12px;
+    border-radius: 4px;
+    border: 1px solid #e9e9f0;
+    background-color: $white;
+}
+
+.employee-form input.ng-invalid.ng-touched,
+.employee-form select.ng-invalid.ng-touched {
+    border-color: red !important;
+}
+
+.invalid-feedback {
+  color: red;
+}

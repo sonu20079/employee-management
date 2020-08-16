@@ -11,7 +11,8 @@ export class StorageService {
     localStorage.setItem(key, JSON.stringify(value));
   }
 
-  public static getLocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key));
+  public static getLocalStorage(key, defaultValue = null) {
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) : defaultValue;
   }
 }
